@@ -1,5 +1,6 @@
 ---
 title: Docker
+layout: kb
 ---
 
 Get Docker machine IP
