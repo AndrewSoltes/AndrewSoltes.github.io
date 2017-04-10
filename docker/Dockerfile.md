@@ -2,10 +2,11 @@
 title: Dockerfile
 layout: kb
 ---
+
 Sample *Dockerfile* file:
 
 
-{% highlight %}
+{% highlight sh %}
 FROM node
 
 COPY . /opt/app
