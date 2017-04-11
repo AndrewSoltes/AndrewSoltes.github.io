@@ -17,6 +17,10 @@ Run with name and console (-it)
 
 Run and remove container after shutdown
 
+	docker build -t java-test .
+
+Remove container after shutdown
+
 	docker run --rm java-test
 
 Re-run container created by run command
@@ -50,7 +54,7 @@ Also delete volumes associated with containers
 
 	docker-compose down -v
 
-Compose rebuild containers
+Compose rebuild
 
 	docker-compose build
 
