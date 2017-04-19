@@ -1,3 +1,8 @@
+---
+title: Autokey
+layout: kb
+---
+
 Create new folder then in it run scripts then assign keybinding
 
 Folder archive: [autokey.zip](autokey.zip)
