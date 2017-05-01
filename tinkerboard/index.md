@@ -56,3 +56,25 @@ sudo smbpasswd -a defk
 New SMB password: secret
 Reenter SMB password: secret
 {% endhighlight %}
+
+Setup OpenVPN
+------------
+
+{% highlight sh %}
+cd /tmp
+sudo apt-get install openvpn
+wget “https://s3-us-west-1.amazonaws.com/heartbleed/linux/linux-files.zip“
+unzip linux-files.zip
+cd “Linux OpenVPN Updated files”/
+sudo cp ca.crt TCP/* UDP/* Wdc.key /etc/openvpn/
+cd /etc/openvpn/
+sudo sed -i “s/auth-user-pass/auth-user-pass pass.txt/g” *.ovpn
+sudo nano pass.txt
+# put into file:
+# username
+# password
+
+# Run:
+cd /etc/openvpn/
+sudo openvpn Netherlands1-tcp.ovpn
+{% endhighlight %}
