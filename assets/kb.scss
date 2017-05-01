@@ -14,7 +14,7 @@ body {
 h2 {
 	border-bottom: $dark-purple dashed 1px;
 	font-weight: bold;
-    font-size: larger;
+	font-size: larger;
 }
 
 pre {
@@ -47,14 +47,14 @@ pre {
 		}
 
 		> a:hover {
-			padding-left: 29px;
+			padding-left: 0px;
 			color: #563d7c;
-    		text-decoration: none;
-    		background-color: transparent;
+			text-decoration: none;
+			background-color: transparent;
 		}
 
 		a.nav-active {
-			padding-left: 28px;
+			padding-left: 0px;
 			font-weight: 700;
 			color: $dark-purple;
 			background-color: transparent;
