@@ -78,3 +78,36 @@ sudo nano pass.txt
 cd /etc/openvpn/
 sudo openvpn Netherlands1-tcp.ovpn
 {% endhighlight %}
+
+Convert All Ebooks in Folder to .mobi
+------------
+
+	sudo apt install calibre
+
+{% highlight python %}
+import os
+import sys
+import subprocess
+ 
+if len(sys.argv) < 2:
+    print('Usage: ebook_convert <root-dir> [output-extension(.mobi, .epub, ...)]')
+
+rootDir = sys.argv[1]
+outExt = '.' + sys.argv[2] if len(sys.argv) >= 3 else '.mobi'
+# add .pdf if you want
+inputExts = ['.fb2', '.epub', '.rtf', '.pdb', '.txt', '.html', '.mobi', '.lrf']
+
+for dirName, subdirList, fileList in os.walk(rootDir):
+    for fname in fileList:
+        extIdx = fname.rfind('.')
+        inExt = fname[extIdx:]
+        if inExt != outExt and inExt in inputExts:
+            outFname = fname[:extIdx] + outExt
+            inFilePath = os.path.join(dirName, fname)
+            outFilePath = os.path.join(dirName, outFname)
+            print('Converting - From: [%s], To: [%s]' % (inFilePath, outFilePath))
+            subprocess.call(
+                ['ebook-convert', inFilePath, outFilePath],
+                stderr=subprocess.STDOUT)
+
+{% endhighlight %}
