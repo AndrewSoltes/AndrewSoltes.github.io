@@ -93,7 +93,7 @@ if len(sys.argv) < 2:
     print('Usage: ebook_convert <root-dir> [output-extension(.mobi, .epub, ...)]')
 
 rootDir = sys.argv[1]
-outExt = '.' + sys.argv[2] if len(sys.argv) >= 3 else '.mobi'
+outExt = sys.argv[2] if len(sys.argv) >= 3 else '.mobi'
 # add .pdf if you want
 inputExts = ['.fb2', '.epub', '.rtf', '.pdb', '.txt', '.html', '.mobi', '.lrf']
 
