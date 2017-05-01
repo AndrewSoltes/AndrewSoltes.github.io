@@ -21,6 +21,8 @@ nano /etc/pulse/daemon.conf
 {% endhighlight %}
 
 Setup samba
+-----------
+
 {% highlight sh %}
 sudo nano /etc/samba/smb.conf
 
@@ -53,5 +55,4 @@ sudo useradd -c "Def K" defk
 sudo smbpasswd -a defk
 New SMB password: secret
 Reenter SMB password: secret
-Added user joel
 {% endhighlight %}
