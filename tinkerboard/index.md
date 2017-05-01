@@ -91,6 +91,7 @@ import subprocess
  
 if len(sys.argv) < 2:
     print('Usage: ebook_convert <root-dir> [output-extension(.mobi, .epub, ...)]')
+    exit()
 
 rootDir = sys.argv[1]
 outExt = sys.argv[2] if len(sys.argv) >= 3 else '.mobi'
@@ -109,5 +110,4 @@ for dirName, subdirList, fileList in os.walk(rootDir):
             subprocess.call(
                 ['ebook-convert', inFilePath, outFilePath],
                 stderr=subprocess.STDOUT)
-
 {% endhighlight %}
