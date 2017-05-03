@@ -18,6 +18,7 @@ services:
       # - type: bind
       #   source: ./app
       #   target: /opt/app/src
+    command: top
     env_file:
       - ./common.env
     environment:

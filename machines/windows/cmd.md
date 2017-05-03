@@ -7,6 +7,10 @@ List files recursively
 
 	dir /s/b /A-D
 
+List in tree
+
+	tree /f /a
+
 Delete dir
 
 	rmdir /S/Q <dir>
