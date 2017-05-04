@@ -8,4 +8,4 @@ title: Home
 
 Andrew's kiosk of (sometimes) useful information.
 
-Pick something that insterests you from left.
+Pick something that insterests you from the left.
